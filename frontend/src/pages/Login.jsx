@@ -21,6 +21,12 @@ export default function Login() {
     if (logged) navigate("/feed", { replace: true });
   }, [logged, navigate]);
 
+  useEffect(() => {
+  document.body.classList.add("login-bg");
+  return () => document.body.classList.remove("login-bg");
+}, []);
+
+
   const imagens = useMemo(() => ["/img/celular2.png", "/img/celular3.png"], []);
   const [index, setIndex] = useState(0);
 

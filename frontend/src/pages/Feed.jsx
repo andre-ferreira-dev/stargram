@@ -8,19 +8,18 @@ import React, {
 } from "react";
 import "../styles/feed.css";
 import { useAuth } from "../auth/AuthContext.jsx";
-import { useNavigate } from "react-router-dom"; // ✅ NOVO
+import { useNavigate } from "react-router-dom";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5161";
 
 export default function Feed() {
   const { user, logout } = useAuth();
-  const navigate = useNavigate(); // ✅ NOVO
+  const navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
 
-  // ✅ Logout de verdade: limpa token + volta pro login
   function handleLogout() {
     logout();
     navigate("/login", { replace: true });
@@ -60,9 +59,7 @@ export default function Feed() {
         setLoadError("");
 
         const res = await fetch(`${API_BASE_URL}/api/posts`);
-        if (!res.ok) {
-          throw new Error("Erro ao carregar o feed.");
-        }
+        if (!res.ok) throw new Error("Erro ao carregar o feed.");
 
         const data = await res.json();
         setPosts(data);
@@ -90,7 +87,6 @@ export default function Feed() {
 
   return (
     <div className="llm-wrap">
-      {/* ✅ agora passa handleLogout */}
       <TopBar onLogout={handleLogout} user={user} />
 
       <main className="llm-main">
@@ -148,7 +144,6 @@ function TopBar({ onLogout, user }) {
             <input placeholder="Pesquisar" aria-label="Pesquisar" />
           </div>
 
-          {/* ✅ agora sempre desloga + navega */}
           <button className="logout-btn" title="Sair" onClick={onLogout}>
             Sair
           </button>
@@ -394,9 +389,7 @@ function PostCard({ post, user, onPostUpdated }) {
     post.likesCount ?? post.likedBy?.length ?? post.likeCount ?? 0;
 
   const isLiked =
-    post.isLikedByCurrentUser ??
-    post.likedBy?.includes(user?.id) ??
-    false;
+    post.isLikedByCurrentUser ?? post.likedBy?.includes(user?.id) ?? false;
 
   async function toggleLike() {
     if (!user) return;

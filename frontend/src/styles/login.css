@@ -3,10 +3,12 @@
    ========================================================= */
 
 /* RESET BÁSICO */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* RESET BÁSICO (só dentro do login) */
+.login-page,
+.login-page * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* BODY do login (como é SPA, mantemos estilo geral aqui) */
-body {
+/* BODY do login (só quando a tela de login estiver ativa) */
+body.login-bg {
   background: url("/img/background.png") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
@@ -14,6 +16,7 @@ body {
   flex-direction: column;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
+
 
 /* Área central (apenas login) */
 .login-page {
