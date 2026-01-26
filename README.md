@@ -1,16 +1,73 @@
-# React + Vite
+# ⭐ Stargram
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Stargram** é uma rede social desenvolvida para *estrelas* — pessoas que querem compartilhar momentos, conquistas e ideias em uma plataforma moderna, segura e escalável.
 
-Currently, two official plugins are available:
+O projeto foi criado com foco em **arquitetura backend robusta**, **autenticação segura** e **armazenamento estruturado de dados**, servindo também como parte de um portfólio profissional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Sobre o Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O Stargram simula o funcionamento de uma rede social completa, permitindo que usuários:
 
-## Expanding the ESLint configuration
+- Criem contas e façam login
+- Publiquem conteúdos
+- Interajam com outros usuários
+- Gerenciem perfis e informações pessoais
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O objetivo do projeto é unir **experiência prática em desenvolvimento Full Stack** com conceitos reais utilizados em aplicações de produção.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Backend
+- **.NET (C#)**  
+- **ASP.NET Core**
+- **Entity Framework Core**
+- **JWT (JSON Web Token)** para autenticação
+
+### Banco de Dados
+- **SQL Server**
+- Modelagem relacional
+- Relacionamentos entre usuários, postagens e interações
+
+### Frontend
+- **React**
+- **Vite**
+- **HTML5, CSS3 e JavaScript**
+
+---
+
+## 🧱 Arquitetura
+
+- API RESTful desenvolvida em **.NET**
+- Persistência de dados com **SQL Server**
+- Separação de responsabilidades (Controllers, Services, Models)
+- Comunicação segura entre frontend e backend
+
+---
+
+## 🎯 Objetivo do Projeto
+
+- Praticar desenvolvimento **Full Stack**
+- Aplicar conceitos de **APIs REST**
+- Trabalhar com **banco de dados relacional**
+- Construir uma aplicação próxima de um cenário real de mercado
+- Evoluir continuamente com novas funcionalidades
+
+---
+
+## 📌 Status do Projeto
+
+🚧 Em desenvolvimento  
+Novas funcionalidades e melhorias estão sendo implementadas continuamente.
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/133928856?v=4" width=150><br><sub><b>André Henrique Marfin Ferreira</b></sub>](https://github.com/drezin22) |
+| :---: |
+
+⭐ *Stargram — uma rede social feita para quem nasceu para brilhar.*
